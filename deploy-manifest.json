@@ -13,7 +13,8 @@
     {
       "path": "/frontend/*",
       "target": {
-        "kind": "Static"
+        "kind": "Static",
+        "cacheControl": "public, max-age=0"
       }
     },
     {
