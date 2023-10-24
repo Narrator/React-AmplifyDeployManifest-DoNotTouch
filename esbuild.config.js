@@ -4,7 +4,7 @@ const bundle = async () => {
   await Promise.all([
     build({
       entryPoints: ['compute/index.ts'],
-      outfile: '.amplify-hosting/compute/index.cjs',
+      outfile: '.amplify-hosting/compute/default/index.cjs',
       bundle: true,
       minify: true,
       platform: 'node',
