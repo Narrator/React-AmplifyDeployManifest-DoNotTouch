@@ -15,6 +15,20 @@
   },
   "routes": [
     {
+      "path": "/assets/*",
+      "target": {
+        "kind": "Static",
+        "cacheControl": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "path": "/screenshots/*",
+      "target": {
+        "kind": "Static",
+        "cacheControl": "public, max-age=0"
+      }
+    },
+    {
       "path": "/todo/*",
       "target": {
         "kind": "Static",

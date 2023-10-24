@@ -97,7 +97,7 @@ export default defineConfig({
           },
         ],
       },
-      base: "/todo",
+      base: "/todo/",
     }),
   ],
 });
