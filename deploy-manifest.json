@@ -11,10 +11,9 @@
   },
   "routes": [
     {
-      "path": "/backend/*",
+      "path": "/frontend/*",
       "target": {
-        "kind": "Compute",
-        "src": "default"
+        "kind": "Static"
       }
     },
     {
@@ -26,12 +25,12 @@
     {
       "path": "/*",
       "target": {
-        "kind": "Static",
-        "cacheControl": "public, max-age=0"
-      },
-      "fallback": {
         "kind": "Compute",
         "src": "default"
+      },
+      "fallback": {
+        "kind": "Static",
+        "cacheControl": "public, max-age=0"
       }
     }
   ],
