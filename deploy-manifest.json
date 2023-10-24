@@ -10,16 +10,29 @@
     "dangerouslyAllowSVG": false
   },
   "routes": [
-    { "path": "/json", "target": { "kind": "Compute", "src": "default" } },
-    { "path": "/html", "target": { "kind": "Compute", "src": "default" } },
-    { "path": "/text", "target": { "kind": "Compute", "src": "default" } },
-    { "path": "/status-400", "target": { "kind": "Compute", "src": "default" } },
-    { "path": "/header", "target": { "kind": "Compute", "src": "default" } },
-    { "path": "/cache-control", "target": { "kind": "Compute", "src": "default" } },
-    { "path": "/ahio", "target": { "kind": "ImageOptimization" } },
+    {
+      "path": "/backend/*",
+      "target": {
+        "kind": "Compute",
+        "src": "default"
+      }
+    },
+    {
+      "path": "/ahio",
+      "target": {
+        "kind": "ImageOptimization"
+      }
+    },
     {
       "path": "/*",
-      "target": { "kind": "Static", "cacheControl": "public, max-age=31536000, immutable" }
+      "target": {
+        "kind": "Static",
+        "cacheControl": "public, max-age=0"
+      },
+      "fallback": {
+        "kind": "Compute",
+        "src": "default"
+      }
     }
   ],
   "computeResources": [
