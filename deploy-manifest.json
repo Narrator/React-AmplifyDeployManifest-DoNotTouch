@@ -29,7 +29,7 @@
       }
     },
     {
-      "path": "/todo/*",
+      "path": "/todo*",
       "target": {
         "kind": "Static",
         "cacheControl": "public, max-age=0"
